@@ -1,4 +1,4 @@
-# Garden Guard: Penjaga Rumah
+# Garden Guard
 
 ![Preview Garden Guard](preview.png)
 
