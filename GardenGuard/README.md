@@ -1,20 +1,6 @@
 # Garden Guard: Penjaga Rumah
 
-Prototipe game survival top-down untuk GDevelop. Pemain menjaga zona terbatas di dekat rumah, membidik dengan mouse, menembak tiga jenis monster yang keluar dari portal secara acak, dan mempertahankan rumah selama mungkin.
-
 ![Preview Garden Guard](preview.png)
-
-## Membuka proyek
-
-1. Ekstrak ZIP.
-2. Buka GDevelop.
-3. Pilih **Open a project**.
-4. Pilih `game.json` di folder ini.
-5. Tekan **Preview**.
-
-Tidak diperlukan JavaScript. Semua gameplay berada pada **Game → Events** sebagai visual events yang dapat dibaca dan diedit langsung.
-
-Folder `preview-web` berisi hasil ekspor HTML5 yang sudah berhasil dikompilasi. Untuk mencoba versi web tanpa GDevelop, jalankan folder tersebut lewat local web server lalu buka `index.html`.
 
 ## Kontrol
 
@@ -25,11 +11,11 @@ Folder `preview-web` berisi hasil ekspor HTML5 yang sudah berhasil dikompilasi. 
 
 ## Tiga tipe musuh
 
-| Objek | Peluang | HP | Kecepatan | Damage rumah | Nilai |
-|---|---:|---:|---:|---:|---:|
-| `EnemyBasic` | 55% | 50 | 70 px/dtk | 8 | 10 |
-| `EnemyFast` | 27% | 30 | 125 px/dtk | 5 | 15 |
-| `EnemyTank` | 18% | 160 | 42 px/dtk | 18 | 30 |
+| Objek        | Peluang |  HP |  Kecepatan | Damage rumah | Nilai |
+| ------------ | ------: | --: | ---------: | -----------: | ----: |
+| `EnemyBasic` |     55% |  50 |  70 px/dtk |            8 |    10 |
+| `EnemyFast`  |     27% |  30 | 125 px/dtk |            5 |    15 |
+| `EnemyTank`  |     18% | 160 |  42 px/dtk |           18 |    30 |
 
 Ketiganya dimasukkan ke object group `Enemies`, sehingga event gerak, serangan, collision, health bar, dan kematian tidak perlu diduplikasi.
 
