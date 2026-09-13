@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="410" height="540" viewBox="0 0 410 540">
+  <defs>
+    <linearGradient id="zone" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#baf7df" stop-opacity=".17"/>
+      <stop offset="1" stop-color="#67d4c2" stop-opacity=".05"/>
+    </linearGradient>
+  </defs>
+  <rect x="5" y="5" width="400" height="530" rx="28" fill="url(#zone)" stroke="#d6fff0" stroke-width="4" stroke-dasharray="13 10" opacity=".72"/>
+  <path d="M19 55 V22 H151" fill="none" stroke="#e9fff7" stroke-width="7" stroke-linecap="round" opacity=".82"/>
+  <path d="M19 485 V518 H151" fill="none" stroke="#e9fff7" stroke-width="7" stroke-linecap="round" opacity=".82"/>
+  <text x="24" y="43" fill="#effff8" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="700" letter-spacing="1">AREA PENJAGA</text>
+</svg>

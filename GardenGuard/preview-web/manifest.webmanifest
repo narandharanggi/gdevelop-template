@@ -1,0 +1,12 @@
+{
+  "name": "Garden Guard: Penjaga Rumah",
+  "short_name": "Garden Guard: Penjaga Rumah",
+  "id": "id.ac.gardenguard.game",
+  "description": "Game survival top-down: bergerak di halaman, menembak tiga tipe monster, dan mempertahankan rumah. Seluruh gameplay dibuat dengan visual events GDevelop.",
+  "orientation": "landscape",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "black",
+  "categories": ["games", "entertainment"],
+  "icons": []
+}

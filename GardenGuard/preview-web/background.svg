@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="lawn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#67b95d"/>
+      <stop offset="1" stop-color="#3f914d"/>
+    </linearGradient>
+    <pattern id="stripes" width="96" height="96" patternUnits="userSpaceOnUse" patternTransform="rotate(15)">
+      <rect width="48" height="96" fill="#ffffff" opacity=".035"/>
+    </pattern>
+    <pattern id="dots" width="44" height="44" patternUnits="userSpaceOnUse">
+      <circle cx="8" cy="10" r="2" fill="#dff6a4" opacity=".24"/>
+      <circle cx="31" cy="33" r="1.5" fill="#275d3c" opacity=".2"/>
+    </pattern>
+    <linearGradient id="path" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#bf9a67"/>
+      <stop offset="1" stop-color="#dfc28c"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="#163b52"/>
+  <rect y="94" width="1280" height="626" fill="url(#lawn)"/>
+  <rect y="94" width="1280" height="626" fill="url(#stripes)"/>
+  <rect y="94" width="1280" height="626" fill="url(#dots)"/>
+  <path d="M0 310 C180 292 280 325 410 348 C610 384 740 375 930 352 C1080 334 1170 342 1280 370 L1280 505 C1145 482 1040 472 914 486 C714 508 575 513 382 480 C218 452 112 440 0 459Z" fill="url(#path)" opacity=".76"/>
+  <path d="M0 310 C180 292 280 325 410 348 C610 384 740 375 930 352 C1080 334 1170 342 1280 370" fill="none" stroke="#765f43" stroke-width="5" opacity=".32"/>
+  <path d="M0 459 C112 440 218 452 382 480 C575 513 714 508 914 486 C1040 472 1145 482 1280 505" fill="none" stroke="#765f43" stroke-width="5" opacity=".32"/>
+  <g fill="#f7d65c" opacity=".85">
+    <circle cx="300" cy="155" r="4"/><circle cx="496" cy="610" r="4"/><circle cx="835" cy="160" r="4"/><circle cx="1002" cy="592" r="4"/>
+  </g>
+  <g fill="#f7a7c6" opacity=".82">
+    <circle cx="432" cy="200" r="4"/><circle cx="742" cy="560" r="4"/><circle cx="1068" cy="205" r="4"/>
+  </g>
+  <rect x="0" y="0" width="1280" height="94" fill="#102a43"/>
+  <rect x="0" y="94" width="1280" height="5" fill="#d4edb4" opacity=".55"/>
+  <rect x="0" y="670" width="1280" height="50" fill="#15354a" opacity=".94"/>
+</svg>
