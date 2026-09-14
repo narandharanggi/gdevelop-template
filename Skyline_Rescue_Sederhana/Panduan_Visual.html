@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Panduan Visual — Skyline Rescue Sederhana</title>
+<style>
+:root{color-scheme:light;--ink:#193c49;--muted:#55717a;--line:#d7e3df;--teal:#187f79;--paper:#fffdf6}
+*{box-sizing:border-box}body{margin:0;background:#eaf1ed;color:var(--ink);font:16px/1.65 system-ui,-apple-system,Segoe UI,sans-serif}main{max-width:1060px;margin:32px auto;background:var(--paper);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 12px 35px #183c4810}header{padding:42px 48px;background:#163947;color:#f9edcc}.eyebrow{font-size:12px;font-weight:750;letter-spacing:1.8px;color:#b0d8c7}h1{font-size:38px;line-height:1.18;margin:14px 0}header p{max-width:780px;margin:12px 0 0;color:#d3e8de}.badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}.badges span{border:1px solid #5b817d;border-radius:20px;padding:4px 12px;font-size:13px}.content{padding:30px 48px 42px}h2{font-size:25px;line-height:1.3;margin:36px 0 12px}h3{font-size:18px;margin:26px 0 8px}p{margin:12px 0}a{color:var(--teal)}code{background:#e8efea;border-radius:4px;padding:2px 5px;font:13px/1.5 ui-monospace,SFMono-Regular,Consolas,monospace;overflow-wrap:anywhere}table{border-collapse:collapse;width:100%;margin:15px 0 22px;font-size:14px}th{text-align:left;background:#e5eee7;color:#204b50}th,td{padding:11px 13px;border:1px solid var(--line);vertical-align:top}th:first-child{width:28%}.events th:first-child{width:44%}.callout{padding:15px 18px;border-left:4px solid #d4a543;background:#faf1d8;margin:20px 0}.caption{font-size:13px;color:var(--muted)}.preview{display:block;width:100%;height:auto;border-radius:10px;border:1px solid var(--line)}.group{border-top:1px solid var(--line);padding-top:8px}ol,ul{padding-left:23px}li{margin:8px 0}.footer{border-top:1px solid var(--line);margin-top:34px;padding-top:20px;color:var(--muted);font-size:13px}@media(max-width:650px){main{margin:0;border-radius:0}header,.content{padding:25px 20px}h1{font-size:30px}table{font-size:12px}th,td{padding:8px}code{font-size:11px}}@media print{body{background:white}main{box-shadow:none;border:0;margin:0;max-width:none}header{print-color-adjust:exact}.content{padding:15px 20px}h2,h3{break-after:avoid}tr{break-inside:avoid}.preview{max-height:330px;object-fit:contain}}
+</style>
+</head>
+<body>
+<main>
+<header>
+<div class="eyebrow">GDEVELOP · VISUAL SCRIPTING</div>
+<h1>Skyline Rescue<br>Versi Sederhana</h1>
+<p>Satu warga menunggu pertolongan. Player menyingkirkan penjaga, menyelamatkan warga, lalu mengantarnya ke pos evakuasi.</p>
+<div class="badges"><span>1 NPC</span><span>2 musuh diam</span><span>6 kelompok event</span><span>Tanpa event JavaScript</span></div>
+</header>
+<div class="content">
+<img class="preview" src="Preview.png" alt="Player menembak sambil mengawal warga di jalur platformer yang rata.">
+<p class="caption">Buka game.json di GDevelop untuk mengedit objek, level, dan seluruh event.</p>
+
+<h2>Mulai dari tiga mekanik inti</h2>
+<ol>
+<li><strong>Tembak.</strong> Player bergerak dengan A/D atau panah, melompat dengan Space, dan menembak dengan Z.</li>
+<li><strong>Selamatkan.</strong> Tekan E di dekat warga. Status warga berubah dari <code>waiting</code> menjadi <code>following</code>.</li>
+<li><strong>Kawal.</strong> Warga mengikuti player di tanah rata. Ketika menyentuh goal, statusnya menjadi <code>safe</code>. Player juga harus berada di goal untuk menang.</li>
+</ol>
+<p>Player memiliki 5 HP, warga 3 HP, dan musuh 2 HP. Satu peluru memberi 1 damage. Nyawa player atau warga habis berarti kalah. Tekan lalu lepaskan R untuk mengulang.</p>
+
+<h2>Apa yang disederhanakan?</h2>
+<table>
+<thead><tr><th>Bagian</th><th>Skyline Rescue sebelumnya</th><th>Versi ini</th></tr></thead>
+<tbody>
+<tr><td>NPC</td><td>Tiga warga dengan antrean, ID, dan lompatan otomatis.</td><td>Satu warga dengan pemeriksaan jarak horizontal.</td></tr>
+<tr><td>AI musuh</td><td>Bergerak, memilih target, menembak, dan memukul.</td><td>Diam, menghadap player, menembak berkala.</td></tr>
+<tr><td>Level</td><td>Jurang dan rintangan di jalur utama.</td><td>Tanah rata; platform atas untuk lompatan opsional.</td></tr>
+<tr><td>Progres</td><td>Koin, medkit, penghitung warga dan musuh.</td><td>HP dan status satu warga.</td></tr>
+<tr><td>Struktur event</td><td>108 baris event.</td><td>51 baris event dalam enam kelompok.</td></tr>
+</tbody>
+</table>
+
+<h2>Cara membaca visual scripting</h2>
+<p>Buka scene <strong>Game</strong>, lalu tab <strong>Events</strong>. Kolom kiri berisi <strong>kondisi</strong>, kolom kanan berisi <strong>aksi</strong>. GDevelop mengevaluasi event dari atas ke bawah setiap frame. Semua kondisi pada satu event harus benar; kondisi <em>OR</em> cukup salah satunya. Subevent juga harus memenuhi kondisi event induknya.</p>
+<p>Rumus seperti <code>Player.CenterX()</code> dimasukkan pada kolom ekspresi di event editor. Angka pusat objek dipakai agar perbandingan posisi tidak bergantung pada lebar sprite. <code>TimeDelta()</code> adalah waktu antarframe dalam detik.</p>
+
+<h3>Behavior dan variabel</h3>
+<table>
+<thead><tr><th>Objek / lingkup</th><th>Pengaturan</th></tr></thead>
+<tbody>
+<tr><td>Player</td><td>Behavior <strong>Platformer character</strong>, bernama <code>Platformer</code>. Abaikan kontrol bawaan; kecepatan maksimum 260. Variabel: <code>HP = 5</code>, <code>Facing = 1</code>, <code>ShootCD = 0</code>, <code>Invuln = 0</code>.</td></tr>
+<tr><td>NPC</td><td>Behavior <strong>Platformer character</strong>, bernama <code>Platformer</code>. Abaikan kontrol bawaan; kecepatan maksimum 280. Variabel: <code>HP = 3</code>, <code>State = "waiting"</code> bertipe teks, <code>Invuln = 0</code>.</td></tr>
+<tr><td>Enemy</td><td>Tanpa behavior gerak. Dua instance memakai objek yang sama. Variabel: <code>HP = 2</code>, <code>Facing = -1</code>, <code>ShootCD = 1.2</code>.</td></tr>
+<tr><td>Peluru</td><td><code>PlayerBullet.Life = 0.9</code> dan <code>EnemyBullet.Life = 2.5</code>. Kecepatan diatur lewat aksi gaya permanen.</td></tr>
+<tr><td>Terrain</td><td>Grup berisi <code>Ground</code> dan <code>Platform</code>. Ground: platform normal. Platform atas: jump-through.</td></tr>
+<tr><td>Scene</td><td>Satu variabel teks: <code>GameState = "playing"</code>. Nilai lain: <code>"win"</code> dan <code>"lose"</code>.</td></tr>
+</tbody>
+</table>
+
+<section class="group">
+<h2>01 · Player bergerak dan menembak</h2>
+<p>Kelompok <code>01_PLAYER</code>. Mekanik berjalan selama <code>GameState = "playing"</code>.</p>
+<table class="events">
+<thead><tr><th>Kondisi</th><th>Aksi</th></tr></thead>
+<tbody>
+<tr><td>Awal scene.</td><td>Sembunyikan overlay hasil dan tetapkan posisi vertikal kamera.</td></tr>
+<tr><td>Setiap frame saat bermain.</td><td>Kurangi <code>ShootCD</code> dan <code>Invuln</code> dengan <code>TimeDelta()</code>; batasi minimum 0.</td></tr>
+<tr><td>A atau panah kiri ditekan.</td><td><strong>Simulate left key</strong> untuk Player; <code>Facing = -1</code>; balik sprite secara horizontal.</td></tr>
+<tr><td>D atau panah kanan ditekan.</td><td><strong>Simulate right key</strong>; <code>Facing = 1</code>; kembalikan arah sprite.</td></tr>
+<tr><td>Space ditekan.</td><td><strong>Simulate jump key</strong> untuk Player.</td></tr>
+<tr><td>Z ditekan dan <code>ShootCD ≤ 0</code>.</td><td>Buat PlayerBullet di depan player. Tambahkan gaya X = <code>Player.Variable(Facing) * 680</code>, Y = 0, permanen. Set <code>ShootCD = 0.25</code>.</td></tr>
+</tbody>
+</table>
+<p><code>Facing</code> tetap menyimpan arah terakhir meskipun player berhenti. Cooldown 0,25 detik membuat tombol Z bisa ditahan tanpa menciptakan peluru setiap frame.</p>
+</section>
+
+<section class="group">
+<h2>02 · AI musuh: deteksi dan tembak</h2>
+<p>Kelompok <code>02_ENEMY</code>. AI cukup memakai posisi player dan satu cooldown. Di bawah kondisi bermain, gunakan event <strong>For each Enemy</strong> agar tiap instance memiliki jedanya sendiri.</p>
+<table class="events">
+<thead><tr><th>Kondisi di dalam For each Enemy</th><th>Aksi</th></tr></thead>
+<tbody>
+<tr><td>Setiap frame.</td><td>Set <code>ShootCD</code> ke <code>max(0, Enemy.Variable(ShootCD) - TimeDelta())</code>.</td></tr>
+<tr><td><code>Player.CenterX() ≥ Enemy.CenterX()</code>.</td><td><code>Facing = 1</code>; hadap kanan.</td></tr>
+<tr><td><code>Player.CenterX() &lt; Enemy.CenterX()</code>.</td><td><code>Facing = -1</code>; hadap kiri.</td></tr>
+<tr><td>Enemy masih hidup; <code>abs(Player.CenterX() - Enemy.CenterX()) &lt; 550</code>; <code>ShootCD ≤ 0</code>.</td><td>Buat EnemyBullet di depan musuh. Tambahkan gaya X = <code>Enemy.Variable(Facing) * 300</code>, Y = 0, permanen. Set <code>ShootCD = 1.25</code>.</td></tr>
+</tbody>
+</table>
+<p>Di luar jangkauan, musuh hanya menghadap player. Saat player dekat, musuh menembak horizontal. Peluru tersebut tetap bisa mengenai warga yang berada di lintasannya. Dengan demikian, player perlu melindungi warga meskipun musuh hanya menentukan arah berdasarkan player.</p>
+</section>
+
+<section class="group">
+<h2>03 · Tabrakan peluru dan nyawa</h2>
+<p>Kelompok <code>03_DAMAGE</code>. Peluru diproses satu per satu dengan <strong>For each</strong>.</p>
+<table class="events">
+<thead><tr><th>Kondisi</th><th>Aksi</th></tr></thead>
+<tbody>
+<tr><td>Setiap frame untuk setiap peluru.</td><td>Kurangi <code>Life</code> dengan <code>TimeDelta()</code>.</td></tr>
+<tr><td><code>Life ≤ 0</code> atau peluru mengenai Terrain.</td><td>Set <code>Life = 0</code>, lalu hapus peluru.</td></tr>
+<tr><td>PlayerBullet masih aktif dan mengenai Enemy hidup.</td><td>Pilih musuh terdekat yang bertabrakan; kurangi HP-nya 1; set <code>Life = 0</code> dan hapus peluru.</td></tr>
+<tr><td>EnemyBullet masih aktif dan mengenai Player, atau NPC yang belum safe.</td><td>Jika target <code>Invuln ≤ 0</code>, kurangi HP 1 dan set <code>Invuln = 1</code>. Setelah itu konsumsi peluru, termasuk jika target sedang kebal.</td></tr>
+<tr><td>Enemy memiliki <code>HP ≤ 0</code>.</td><td>Hapus Enemy.</td></tr>
+</tbody>
+</table>
+<p>Peluru player tidak memiliki event damage terhadap NPC. Pengecekan <code>Life &gt; 0</code> mencegah peluru yang sudah dikonsumsi melukai target lain pada frame yang sama. Kebal sementara selama satu detik mencegah nyawa habis akibat beberapa tabrakan berdekatan.</p>
+</section>
+
+<section class="group">
+<h2>04 · NPC: menunggu, mengikuti, aman</h2>
+<p>Kelompok <code>04_NPC</code>. Semua event ini memerlukan keadaan bermain serta HP player dan NPC di atas 0. Karena hanya ada satu NPC, tidak perlu ID, nomor antrean, atau penghubung antarobjek.</p>
+<table class="events">
+<thead><tr><th>Kondisi</th><th>Aksi</th></tr></thead>
+<tbody>
+<tr><td><code>State = "waiting"</code>; E ditekan; selisih pusat X kurang dari 100 dan selisih pusat Y kurang dari 80.</td><td>Set <code>State = "following"</code>; mainkan suara penyelamatan.</td></tr>
+<tr><td><code>State = "following"</code> dan <code>NPC.CenterX() &lt; Player.CenterX() - 80</code>.</td><td><strong>Simulate right key</strong> untuk NPC; hadap kanan.</td></tr>
+<tr><td><code>State = "following"</code> dan <code>NPC.CenterX() &gt; Player.CenterX() + 80</code>.</td><td><strong>Simulate left key</strong> untuk NPC; hadap kiri.</td></tr>
+<tr><td>Jarak horizontal sudah berada dalam 80 piksel.</td><td>Tidak ada event gerak yang memenuhi kondisi. NPC berhenti melalui deselerasi behavior Platformer.</td></tr>
+<tr><td><code>State = "following"</code> dan NPC menyentuh Goal.</td><td>Set <code>State = "safe"</code>; nonaktifkan behavior Platformer NPC; gunakan animasi diam.</td></tr>
+</tbody>
+</table>
+<p>Contoh: pusat player di X = 600 dan NPC di X = 450. Selisihnya 150, sehingga NPC bergerak ke kanan. Ketika jaraknya sudah masuk batas 80, input gerak berhenti; deselerasi membuat jarak akhir sedikit lebih pendek. NPC juga bisa mengikuti kembali ke kiri ketika player berbalik.</p>
+<div class="callout"><strong>Batas level:</strong> NPC berjalan di tanah rata dan tidak meniru tombol lompat player. Platform atas bersifat opsional. Jika menambah jurang atau dinding wajib di jalur bawah, mekanik ini perlu dikembangkan dengan logika melompat atau rute tambahan.</div>
+</section>
+
+<section class="group">
+<h2>05 · Goal, kalah, dan restart</h2>
+<p>Kelompok <code>05_GOAL_RESTART</code>. Event kalah ditempatkan sebelum event menang.</p>
+<table class="events">
+<thead><tr><th>Kondisi</th><th>Aksi</th></tr></thead>
+<tbody>
+<tr><td>Masih bermain; HP player atau NPC habis.</td><td>Set <code>GameState = "lose"</code>.</td></tr>
+<tr><td>Masih bermain; kedua karakter hidup; NPC <code>safe</code>; Player menyentuh Goal.</td><td>Set <code>GameState = "win"</code>.</td></tr>
+<tr><td>Win atau lose; <strong>Trigger once</strong>.</td><td>Tampilkan teks hasil dan suara. Munculkan overlay, hentikan behavior karakter, dan hapus peluru.</td></tr>
+<tr><td>Tombol R dilepas.</td><td>Ganti scene ke <code>"Game"</code> untuk membuat ulang seluruh keadaan awal.</td></tr>
+</tbody>
+</table>
+<p>Player tidak dapat menang dengan meninggalkan warga. Pemeriksaan <code>GameState = "playing"</code> dan HP positif memastikan kematian tidak tertimpa kemenangan pada frame yang sama.</p>
+</section>
+
+<section class="group">
+<h2>06 · Tampilan dan kamera</h2>
+<p>Kelompok <code>06_TAMPILAN</code> menampilkan HP, status warga, petunjuk, dan animasi. HUD berada di layer UI. Dunia mengikuti kamera dengan batas horizontal; satu label NPC mengikuti posisinya. Player dan NPC berubah transparan saat <code>Invuln &gt; 0</code>.</p>
+<p>Kelompok ini membaca hasil mekanik. Saat belajar, mulailah dari kelompok 01–05, lalu lihat bagaimana perubahan variabel muncul di layar melalui kelompok 06.</p>
+</section>
+
+<h2>Latihan mengubah proyek</h2>
+<ol>
+<li>Ubah batas mengikuti dari 80 menjadi 120 pada dua kondisi NPC. Jalankan Preview dan amati jaraknya saat player berhenti.</li>
+<li>Ubah cooldown musuh dari 1,25 menjadi 2 detik. Bandingkan jeda serangannya.</li>
+<li>Tambahkan satu instance Enemy pada tanah di Scene Editor. Event For each otomatis memberikan cooldown terpisah.</li>
+</ol>
+<p>Untuk perubahan HP, sesuaikan nilai awal variabel dan angka maksimum yang ditulis pada event HUD. Untuk peluru, ubah <code>Life</code> pada variabel objek dan kecepatan pada aksi gaya.</p>
+
+<div class="footer">Proyek asli diadaptasi menjadi versi pembelajaran yang lebih sederhana. Berisi sprite SVG, suara WAV, dan event visual native. Diuji dengan engine GDevelop 5.6.269-0 melalui ekspor runtime Chromium: 15 skenario lulus, termasuk satu permainan penuh sampai menang. Tidak memerlukan extension tambahan.</div>
+</div>
+</main>
+</body>
+</html>

@@ -1,0 +1,5785 @@
+{
+  "firstLayout": "Game",
+  "gdVersion": {
+    "build": 269,
+    "major": 5,
+    "minor": 6,
+    "revision": 0
+  },
+  "properties": {
+    "adaptGameResolutionAtRuntime": false,
+    "antialiasingMode": "MSAA",
+    "antialisingEnabledOnMobile": false,
+    "folderProject": false,
+    "orientation": "landscape",
+    "packageName": "com.ranggi.skylinerescuesederhana",
+    "pixelsRounding": false,
+    "projectUuid": "6d47c531-a516-4cd4-9c32-6265003e9ee1",
+    "scaleMode": "linear",
+    "sizeOnStartupMode": "adaptWidth",
+    "templateSlug": "",
+    "version": "1.0.0",
+    "name": "Skyline Rescue — Versi Sederhana",
+    "description": "Satu warga, dua penjaga, satu pos evakuasi. Semua mekanik dibuat dengan event visual GDevelop.",
+    "author": "Ranggi",
+    "windowWidth": 1280,
+    "windowHeight": 720,
+    "latestCompilationDirectory": "",
+    "maxFPS": 60,
+    "minFPS": 20,
+    "verticalSync": false,
+    "platformSpecificAssets": {},
+    "loadingScreen": {
+      "backgroundColor": 1187891,
+      "backgroundFadeInDuration": 0.2,
+      "backgroundImageResourceName": "",
+      "gdevelopLogoStyle": "light",
+      "logoAndProgressFadeInDuration": 0.2,
+      "logoAndProgressLogoFadeInDelay": 0,
+      "minDuration": 0.2,
+      "progressBarColor": 16174976,
+      "progressBarHeight": 20,
+      "progressBarMaxWidth": 200,
+      "progressBarMinWidth": 40,
+      "progressBarWidthPercent": 30,
+      "showGDevelopSplash": false,
+      "showProgressBar": true
+    },
+    "watermark": {
+      "placement": "bottom-left",
+      "showWatermark": false
+    },
+    "authorIds": [],
+    "authorUsernames": [],
+    "categories": [],
+    "playableDevices": [
+      "keyboard"
+    ],
+    "extensionProperties": [],
+    "platforms": [
+      {
+        "name": "GDevelop JS platform"
+      }
+    ],
+    "currentPlatform": "GDevelop JS platform"
+  },
+  "resources": {
+    "resources": [
+      {
+        "file": "assets/background.svg",
+        "kind": "image",
+        "metadata": "",
+        "name": "background",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "file": "assets/bush.svg",
+        "kind": "image",
+        "metadata": "",
+        "name": "bush",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "file": "assets/enemy_bullet.svg",
+        "kind": "image",
+        "metadata": "",
+        "name": "enemy_bullet",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "file": "assets/enemy_idle.svg",
+        "kind": "image",
+        "metadata": "",
+        "name": "enemy_idle",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "file": "assets/enemy_shot.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "enemy_shot",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/fail.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "fail",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/flag.svg",
+        "kind": "image",
+        "metadata": "",
+        "name": "flag",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "file": "assets/footer.svg",
+        "kind": "image",
+        "metadata": "",
+        "name": "footer",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "file": "assets/goal_zone.svg",
+        "kind": "image",
+        "metadata": "",
+        "name": "goal_zone",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "file": "assets/ground.svg",
+        "kind": "image",
+        "metadata": "",
+        "name": "ground",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "file": "assets/hit.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "hit",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/hud.svg",
+        "kind": "image",
+        "metadata": "",
+        "name": "hud",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "file": "assets/modal.svg",
+        "kind": "image",
+        "metadata": "",
+        "name": "modal",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "file": "assets/npc_idle.svg",
+        "kind": "image",
+        "metadata": "",
+        "name": "npc_idle",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "file": "assets/npc_walk1.svg",
+        "kind": "image",
+        "metadata": "",
+        "name": "npc_walk1",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "file": "assets/npc_walk2.svg",
+        "kind": "image",
+        "metadata": "",
+        "name": "npc_walk2",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "file": "assets/platform.svg",
+        "kind": "image",
+        "metadata": "",
+        "name": "platform",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "file": "assets/player_bullet.svg",
+        "kind": "image",
+        "metadata": "",
+        "name": "player_bullet",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "file": "assets/player_idle.svg",
+        "kind": "image",
+        "metadata": "",
+        "name": "player_idle",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "file": "assets/player_jump.svg",
+        "kind": "image",
+        "metadata": "",
+        "name": "player_jump",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "file": "assets/player_walk1.svg",
+        "kind": "image",
+        "metadata": "",
+        "name": "player_walk1",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "file": "assets/player_walk2.svg",
+        "kind": "image",
+        "metadata": "",
+        "name": "player_walk2",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "file": "assets/prompt_bg.svg",
+        "kind": "image",
+        "metadata": "",
+        "name": "prompt_bg",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "file": "assets/rescue.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "rescue",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/shelter.svg",
+        "kind": "image",
+        "metadata": "",
+        "name": "shelter",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "file": "assets/shot.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "shot",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/sign.svg",
+        "kind": "image",
+        "metadata": "",
+        "name": "sign",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "file": "assets/tree.svg",
+        "kind": "image",
+        "metadata": "",
+        "name": "tree",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "file": "assets/veil.svg",
+        "kind": "image",
+        "metadata": "",
+        "name": "veil",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "file": "assets/win.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "win",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
+      }
+    ]
+  },
+  "objects": [],
+  "objectsFolderStructure": {
+    "folderName": "__ROOT"
+  },
+  "objectsGroups": [],
+  "variables": [],
+  "layouts": [
+    {
+      "b": 229,
+      "disableInputWhenNotFocused": true,
+      "mangledName": "Game",
+      "name": "Game",
+      "r": 189,
+      "standardSortMethod": true,
+      "stopSoundsOnStartup": true,
+      "title": "Skyline Rescue — Versi Sederhana",
+      "v": 225,
+      "uiSettings": {},
+      "objectsGroups": [
+        {
+          "name": "Terrain",
+          "objects": [
+            {
+              "name": "Ground"
+            },
+            {
+              "name": "Platform"
+            }
+          ]
+        },
+        {
+          "name": "Overlay",
+          "objects": [
+            {
+              "name": "Veil"
+            },
+            {
+              "name": "Modal"
+            },
+            {
+              "name": "ModalTitle"
+            },
+            {
+              "name": "ModalBody"
+            },
+            {
+              "name": "EndHint"
+            }
+          ]
+        }
+      ],
+      "variables": [
+        {
+          "name": "GameState",
+          "type": "string",
+          "value": "playing"
+        }
+      ],
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Background",
+          "name": "Background",
+          "persistentUuid": "c81f826a-c01b-46bf-b4f8-1b29286cd42c",
+          "width": 0,
+          "x": 0,
+          "y": 0,
+          "zOrder": -100,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Ground",
+          "persistentUuid": "14eef86e-8488-4c54-96b4-c3796ae6f4e3",
+          "width": 0,
+          "x": 0,
+          "y": 600,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Ground",
+          "persistentUuid": "f049d415-2568-4bab-8c6e-fcdba3b9c38a",
+          "width": 0,
+          "x": 64,
+          "y": 600,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Ground",
+          "persistentUuid": "c1face10-987f-425f-a0ce-fe585bcc6c1a",
+          "width": 0,
+          "x": 128,
+          "y": 600,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Ground",
+          "persistentUuid": "6ebc39f9-e5c4-4948-a3af-5f83ed91fa25",
+          "width": 0,
+          "x": 192,
+          "y": 600,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Ground",
+          "persistentUuid": "864b883c-d0c4-46db-afc2-04e41952eba5",
+          "width": 0,
+          "x": 256,
+          "y": 600,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Ground",
+          "persistentUuid": "c9c228f5-260b-424b-b082-e7e2d65d2669",
+          "width": 0,
+          "x": 320,
+          "y": 600,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Ground",
+          "persistentUuid": "0b6df99d-05c3-4d5d-b009-7fda354f85e0",
+          "width": 0,
+          "x": 384,
+          "y": 600,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Ground",
+          "persistentUuid": "b22874f0-5b27-4f22-b04b-657c463775d0",
+          "width": 0,
+          "x": 448,
+          "y": 600,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Ground",
+          "persistentUuid": "3ffb4f83-4860-4a4c-9c65-d928ceadd625",
+          "width": 0,
+          "x": 512,
+          "y": 600,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Ground",
+          "persistentUuid": "2bc03a6b-825f-4552-abad-f2a81b94824f",
+          "width": 0,
+          "x": 576,
+          "y": 600,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Ground",
+          "persistentUuid": "188180e1-5e1a-4662-907a-fa3d4d3a5528",
+          "width": 0,
+          "x": 640,
+          "y": 600,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Ground",
+          "persistentUuid": "e7a8ebc5-6535-49b4-bd0e-5d3bdd3e323c",
+          "width": 0,
+          "x": 704,
+          "y": 600,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Ground",
+          "persistentUuid": "0e2ad1e9-355a-443f-9722-fd9e689b135e",
+          "width": 0,
+          "x": 768,
+          "y": 600,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Ground",
+          "persistentUuid": "bcce32bf-01e4-4a5c-a6b8-5292fafd06c8",
+          "width": 0,
+          "x": 832,
+          "y": 600,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Ground",
+          "persistentUuid": "e9ed6c61-e411-442b-824e-b98de1389335",
+          "width": 0,
+          "x": 896,
+          "y": 600,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Ground",
+          "persistentUuid": "b39eb239-7a7c-4b5c-9211-14db7bf7219c",
+          "width": 0,
+          "x": 960,
+          "y": 600,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Ground",
+          "persistentUuid": "9db5a994-69f0-4daa-9f7e-3bf571061a31",
+          "width": 0,
+          "x": 1024,
+          "y": 600,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Ground",
+          "persistentUuid": "db29d187-56d1-4f33-b098-75dfc5ef4152",
+          "width": 0,
+          "x": 1088,
+          "y": 600,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Ground",
+          "persistentUuid": "647b036c-b712-4e5d-9039-6ce0a1a13d76",
+          "width": 0,
+          "x": 1152,
+          "y": 600,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Ground",
+          "persistentUuid": "52eaa4a1-7694-422a-bd33-e9f7065b1900",
+          "width": 0,
+          "x": 1216,
+          "y": 600,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Ground",
+          "persistentUuid": "65ecf8c6-10e1-4cc5-b068-7a0afae87198",
+          "width": 0,
+          "x": 1280,
+          "y": 600,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Ground",
+          "persistentUuid": "d6a602bf-fa0c-4874-8d7d-a9ce55782ea4",
+          "width": 0,
+          "x": 1344,
+          "y": 600,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Ground",
+          "persistentUuid": "cc293cd9-4bf7-47a1-b3f3-a2a01e32125b",
+          "width": 0,
+          "x": 1408,
+          "y": 600,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Ground",
+          "persistentUuid": "b3a9fee1-0c90-4340-afdb-e55204e42747",
+          "width": 0,
+          "x": 1472,
+          "y": 600,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Ground",
+          "persistentUuid": "7729967b-a1a0-44e4-b74a-80f572a64953",
+          "width": 0,
+          "x": 1536,
+          "y": 600,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Ground",
+          "persistentUuid": "7f8d0dc4-972c-441d-9b50-b0f8663a2189",
+          "width": 0,
+          "x": 1600,
+          "y": 600,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Ground",
+          "persistentUuid": "8f895fbb-7b93-429c-a758-8d8931c52c20",
+          "width": 0,
+          "x": 1664,
+          "y": 600,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Ground",
+          "persistentUuid": "1680c922-03de-476e-bdae-bb73b9246eaa",
+          "width": 0,
+          "x": 1728,
+          "y": 600,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Ground",
+          "persistentUuid": "8482cecf-2fba-488c-8bde-f60783cb3464",
+          "width": 0,
+          "x": 1792,
+          "y": 600,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Ground",
+          "persistentUuid": "ea04ec80-6414-4635-95d3-17a52acd0d41",
+          "width": 0,
+          "x": 1856,
+          "y": 600,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Ground",
+          "persistentUuid": "75266acf-7f30-4722-9204-4e983b5c0cc0",
+          "width": 0,
+          "x": 1920,
+          "y": 600,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Ground",
+          "persistentUuid": "4f12a844-31b6-4d22-85c9-54c9a45d4798",
+          "width": 0,
+          "x": 1984,
+          "y": 600,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Ground",
+          "persistentUuid": "325a531c-9a7c-4138-ab49-f2627591e007",
+          "width": 0,
+          "x": 2048,
+          "y": 600,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Ground",
+          "persistentUuid": "2315867e-8a0c-4341-8a53-9612ab418c60",
+          "width": 0,
+          "x": 2112,
+          "y": 600,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Ground",
+          "persistentUuid": "ab30d582-bd3c-449a-beb5-9255a1e7e36b",
+          "width": 0,
+          "x": 2176,
+          "y": 600,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Ground",
+          "persistentUuid": "a6ebf5fd-8b5c-430d-85f3-b4f5f87e95f4",
+          "width": 0,
+          "x": 2240,
+          "y": 600,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Ground",
+          "persistentUuid": "61903a0d-ad4f-49f8-8429-b2268c86301b",
+          "width": 0,
+          "x": 2304,
+          "y": 600,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Ground",
+          "persistentUuid": "f5a80fbf-9a58-4fc4-8c1e-f27acb505aa7",
+          "width": 0,
+          "x": 2368,
+          "y": 600,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Ground",
+          "persistentUuid": "11f626a6-37a2-4808-919c-4a98cef4196f",
+          "width": 0,
+          "x": 2432,
+          "y": 600,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Ground",
+          "persistentUuid": "10c4fdf0-0dce-419a-8f35-9184494f4365",
+          "width": 0,
+          "x": 2496,
+          "y": 600,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Platform",
+          "persistentUuid": "e6afe017-9dd5-492d-8ece-308e087752ce",
+          "width": 0,
+          "x": 720,
+          "y": 452,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Platform",
+          "persistentUuid": "76652c5d-1521-42b1-9eec-88a43896637b",
+          "width": 0,
+          "x": 784,
+          "y": 452,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Platform",
+          "persistentUuid": "0724d8ad-72b7-4796-bd8f-188441bf008c",
+          "width": 0,
+          "x": 848,
+          "y": 452,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Platform",
+          "persistentUuid": "ad9bd490-da7a-4a52-b228-7c61fb544381",
+          "width": 0,
+          "x": 1408,
+          "y": 452,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Platform",
+          "persistentUuid": "08c7d533-e9e0-4d03-9c6a-3b9d53ed35de",
+          "width": 0,
+          "x": 1472,
+          "y": 452,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Platform",
+          "persistentUuid": "7f2ae4c7-0fef-4d58-874b-846d145f6d43",
+          "width": 0,
+          "x": 1536,
+          "y": 452,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Tree",
+          "persistentUuid": "2abf3ec2-5d15-4494-aede-3a92cd8b6d03",
+          "width": 0,
+          "x": 240,
+          "y": 400,
+          "zOrder": -5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Tree",
+          "persistentUuid": "e7ee916e-5162-4baf-a10f-6a7744e91ace",
+          "width": 0,
+          "x": 730,
+          "y": 400,
+          "zOrder": -5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Tree",
+          "persistentUuid": "a2fc5b70-c660-4790-9024-76391f2b20be",
+          "width": 0,
+          "x": 1310,
+          "y": 400,
+          "zOrder": -5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Tree",
+          "persistentUuid": "a6017bd4-61a1-4553-b645-0890539d071a",
+          "width": 0,
+          "x": 1920,
+          "y": 400,
+          "zOrder": -5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Bush",
+          "persistentUuid": "d0d8abb7-606a-41f5-b279-b3e192c051df",
+          "width": 0,
+          "x": 25,
+          "y": 552,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Bush",
+          "persistentUuid": "cfc40f9b-825a-478c-b513-bc8865d056cd",
+          "width": 0,
+          "x": 415,
+          "y": 552,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Bush",
+          "persistentUuid": "cdcfcf98-c0df-4631-aaab-3f7cf764c586",
+          "width": 0,
+          "x": 870,
+          "y": 552,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Bush",
+          "persistentUuid": "01e48427-0704-4089-b66d-1f5dbfbe0ca6",
+          "width": 0,
+          "x": 1190,
+          "y": 552,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Bush",
+          "persistentUuid": "c64d9c56-9559-43a5-a6c1-efc63ba70679",
+          "width": 0,
+          "x": 1535,
+          "y": 552,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Bush",
+          "persistentUuid": "faf64f6d-60dc-46b3-a417-d273257717d3",
+          "width": 0,
+          "x": 1905,
+          "y": 552,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Bush",
+          "persistentUuid": "73fd97b0-96da-4411-839d-9f14e536ddd0",
+          "width": 0,
+          "x": 2135,
+          "y": 552,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Bush",
+          "persistentUuid": "bf2f14f9-3cfb-4b07-9787-a5252ea8b715",
+          "width": 0,
+          "x": 2420,
+          "y": 552,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 194,
+          "layer": "",
+          "name": "Goal",
+          "persistentUuid": "a69bdf88-fab5-47e9-9c35-2c0ebc926b99",
+          "width": 330,
+          "x": 2200,
+          "y": 406,
+          "zOrder": -3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Shelter",
+          "persistentUuid": "1332993a-3bef-44c1-be04-41cabf0065c0",
+          "width": 0,
+          "x": 2205,
+          "y": 380,
+          "zOrder": -2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Flag",
+          "persistentUuid": "29039e50-3375-42e6-b369-606d8ca0bad5",
+          "width": 0,
+          "x": 2480,
+          "y": 440,
+          "zOrder": -1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Sign",
+          "persistentUuid": "ccb6df45-27ae-4f4c-8ec8-ded9a63ce078",
+          "width": 0,
+          "x": 365,
+          "y": 512,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Player",
+          "persistentUuid": "de7f8d92-d699-45c7-b4f4-c664f4a17037",
+          "width": 0,
+          "x": 120,
+          "y": 536,
+          "zOrder": 10,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "NPC",
+          "persistentUuid": "a15f2916-5d6d-4c9e-9fbc-f873d8ed6e1f",
+          "width": 0,
+          "x": 560,
+          "y": 544,
+          "zOrder": 8,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 22,
+          "layer": "",
+          "name": "NPCLabel",
+          "persistentUuid": "b9257805-60a6-4d1f-92a9-b249671b1bce",
+          "width": 140,
+          "x": 509,
+          "y": 513,
+          "zOrder": 11,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Enemy",
+          "persistentUuid": "1b536688-804b-4c00-8ad9-ccada7b6e1d9",
+          "width": 0,
+          "x": 1040,
+          "y": 536,
+          "zOrder": 9,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Enemy",
+          "persistentUuid": "bd20374b-1a50-402c-85e7-0240748a64ae",
+          "width": 0,
+          "x": 1680,
+          "y": 536,
+          "zOrder": 9,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "UI",
+          "name": "HUDPanel",
+          "persistentUuid": "6e8ebf7e-6616-45d8-ab52-d3ba9576f2cb",
+          "width": 0,
+          "x": 20,
+          "y": 18,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "UI",
+          "name": "HPText",
+          "persistentUuid": "62b8dc2d-d298-40a1-ade0-f8ad13544034",
+          "width": 0,
+          "x": 405,
+          "y": 61,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "UI",
+          "name": "NPCHealthText",
+          "persistentUuid": "4466ca44-9962-46c4-b8fa-71f9ba96a4c6",
+          "width": 0,
+          "x": 655,
+          "y": 61,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "UI",
+          "name": "NPCStateText",
+          "persistentUuid": "11626731-6056-4b99-82e6-d28f5d78bc0d",
+          "width": 0,
+          "x": 912,
+          "y": 63,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "UI",
+          "name": "Footer",
+          "persistentUuid": "1d61faa7-e3ef-4cc8-bf88-82dec770f932",
+          "width": 0,
+          "x": 20,
+          "y": 662,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "UI",
+          "name": "ControlText",
+          "persistentUuid": "131c6e6e-9920-410d-b6a3-d66c38ed015f",
+          "width": 0,
+          "x": 42,
+          "y": 672,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "UI",
+          "name": "PromptBG",
+          "persistentUuid": "0360909f-86ae-4186-af6a-0fcce1251a47",
+          "width": 0,
+          "x": 325,
+          "y": 118,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 30,
+          "layer": "UI",
+          "name": "PromptText",
+          "persistentUuid": "39fac067-d310-4a58-9b6d-74e3cf3a93b7",
+          "width": 620,
+          "x": 330,
+          "y": 128,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "UI",
+          "name": "Veil",
+          "persistentUuid": "c4a757b4-eaa0-4ecb-b72a-596c375498bb",
+          "width": 0,
+          "x": 0,
+          "y": 0,
+          "zOrder": 10,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "UI",
+          "name": "Modal",
+          "persistentUuid": "d81cbe41-1ec6-4a5a-9762-edc841fd95ed",
+          "width": 0,
+          "x": 260,
+          "y": 158,
+          "zOrder": 11,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 70,
+          "layer": "UI",
+          "name": "ModalTitle",
+          "persistentUuid": "ef5997fc-c0f5-4698-90f2-b1fa8ba13d26",
+          "width": 720,
+          "x": 280,
+          "y": 238,
+          "zOrder": 12,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 190,
+          "layer": "UI",
+          "name": "ModalBody",
+          "persistentUuid": "16e0f0ff-b3ed-40f1-b5e8-978c76fe4fb9",
+          "width": 700,
+          "x": 290,
+          "y": 320,
+          "zOrder": 12,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 30,
+          "layer": "UI",
+          "name": "EndHint",
+          "persistentUuid": "f81fd27c-eeac-4dd7-94ed-149ce2742962",
+          "width": 346,
+          "x": 467,
+          "y": 526,
+          "zOrder": 13,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
+      "objects": [
+        {
+          "adaptCollisionMaskAutomatically": false,
+          "assetStoreId": "",
+          "name": "Player",
+          "type": "Sprite",
+          "updateIfNotVisible": true,
+          "variables": [
+            {
+              "name": "HP",
+              "type": "number",
+              "value": 5
+            },
+            {
+              "name": "Facing",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "ShootCD",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "Invuln",
+              "type": "number",
+              "value": 0
+            }
+          ],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Platformer",
+              "type": "PlatformBehavior::PlatformerObjectBehavior",
+              "acceleration": 2400,
+              "canGoDownFromJumpthru": true,
+              "canGrabPlatforms": false,
+              "canGrabWithoutMoving": true,
+              "deceleration": 2500,
+              "gravity": 1350,
+              "ignoreDefaultControls": true,
+              "jumpSpeed": 750,
+              "jumpSustainTime": 0.15,
+              "ladderClimbingSpeed": 150,
+              "maxFallingSpeed": 900,
+              "maxSpeed": 260,
+              "slopeMaxAngle": 60,
+              "useLegacyTrajectory": false,
+              "useRepeatedJump": false,
+              "xGrabTolerance": 10,
+              "yGrabOffset": 0
+            }
+          ],
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.12,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "player_idle",
+                      "points": [],
+                      "originPoint": {
+                        "name": "Origin",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "Center",
+                        "x": 24,
+                        "y": 32
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 8,
+                            "y": 3
+                          },
+                          {
+                            "x": 40,
+                            "y": 3
+                          },
+                          {
+                            "x": 40,
+                            "y": 64
+                          },
+                          {
+                            "x": 8,
+                            "y": 64
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Run",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.12,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "player_walk1",
+                      "points": [],
+                      "originPoint": {
+                        "name": "Origin",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "Center",
+                        "x": 24,
+                        "y": 32
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 8,
+                            "y": 3
+                          },
+                          {
+                            "x": 40,
+                            "y": 3
+                          },
+                          {
+                            "x": 40,
+                            "y": 64
+                          },
+                          {
+                            "x": 8,
+                            "y": 64
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "player_idle",
+                      "points": [],
+                      "originPoint": {
+                        "name": "Origin",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "Center",
+                        "x": 24,
+                        "y": 32
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 8,
+                            "y": 3
+                          },
+                          {
+                            "x": 40,
+                            "y": 3
+                          },
+                          {
+                            "x": 40,
+                            "y": 64
+                          },
+                          {
+                            "x": 8,
+                            "y": 64
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "player_walk2",
+                      "points": [],
+                      "originPoint": {
+                        "name": "Origin",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "Center",
+                        "x": 24,
+                        "y": 32
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 8,
+                            "y": 3
+                          },
+                          {
+                            "x": 40,
+                            "y": 3
+                          },
+                          {
+                            "x": 40,
+                            "y": 64
+                          },
+                          {
+                            "x": 8,
+                            "y": 64
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "player_idle",
+                      "points": [],
+                      "originPoint": {
+                        "name": "Origin",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "Center",
+                        "x": 24,
+                        "y": 32
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 8,
+                            "y": 3
+                          },
+                          {
+                            "x": 40,
+                            "y": 3
+                          },
+                          {
+                            "x": 40,
+                            "y": 64
+                          },
+                          {
+                            "x": 8,
+                            "y": 64
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Jump",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.12,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "player_jump",
+                      "points": [],
+                      "originPoint": {
+                        "name": "Origin",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "Center",
+                        "x": 24,
+                        "y": 32
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 8,
+                            "y": 3
+                          },
+                          {
+                            "x": 40,
+                            "y": 3
+                          },
+                          {
+                            "x": 40,
+                            "y": 64
+                          },
+                          {
+                            "x": 8,
+                            "y": 64
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": false,
+          "assetStoreId": "",
+          "name": "NPC",
+          "type": "Sprite",
+          "updateIfNotVisible": true,
+          "variables": [
+            {
+              "name": "HP",
+              "type": "number",
+              "value": 3
+            },
+            {
+              "name": "State",
+              "type": "string",
+              "value": "waiting"
+            },
+            {
+              "name": "Invuln",
+              "type": "number",
+              "value": 0
+            }
+          ],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Platformer",
+              "type": "PlatformBehavior::PlatformerObjectBehavior",
+              "acceleration": 2400,
+              "canGoDownFromJumpthru": true,
+              "canGrabPlatforms": false,
+              "canGrabWithoutMoving": true,
+              "deceleration": 2500,
+              "gravity": 1350,
+              "ignoreDefaultControls": true,
+              "jumpSpeed": 750,
+              "jumpSustainTime": 0.15,
+              "ladderClimbingSpeed": 150,
+              "maxFallingSpeed": 900,
+              "maxSpeed": 280,
+              "slopeMaxAngle": 60,
+              "useLegacyTrajectory": false,
+              "useRepeatedJump": false,
+              "xGrabTolerance": 10,
+              "yGrabOffset": 0
+            }
+          ],
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.12,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "npc_idle",
+                      "points": [],
+                      "originPoint": {
+                        "name": "Origin",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "Center",
+                        "x": 19,
+                        "y": 28
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 8,
+                            "y": 3
+                          },
+                          {
+                            "x": 30,
+                            "y": 3
+                          },
+                          {
+                            "x": 30,
+                            "y": 56
+                          },
+                          {
+                            "x": 8,
+                            "y": 56
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Run",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.12,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "npc_walk1",
+                      "points": [],
+                      "originPoint": {
+                        "name": "Origin",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "Center",
+                        "x": 19,
+                        "y": 28
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 8,
+                            "y": 3
+                          },
+                          {
+                            "x": 30,
+                            "y": 3
+                          },
+                          {
+                            "x": 30,
+                            "y": 56
+                          },
+                          {
+                            "x": 8,
+                            "y": 56
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "npc_idle",
+                      "points": [],
+                      "originPoint": {
+                        "name": "Origin",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "Center",
+                        "x": 19,
+                        "y": 28
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 8,
+                            "y": 3
+                          },
+                          {
+                            "x": 30,
+                            "y": 3
+                          },
+                          {
+                            "x": 30,
+                            "y": 56
+                          },
+                          {
+                            "x": 8,
+                            "y": 56
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "npc_walk2",
+                      "points": [],
+                      "originPoint": {
+                        "name": "Origin",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "Center",
+                        "x": 19,
+                        "y": 28
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 8,
+                            "y": 3
+                          },
+                          {
+                            "x": 30,
+                            "y": 3
+                          },
+                          {
+                            "x": 30,
+                            "y": 56
+                          },
+                          {
+                            "x": 8,
+                            "y": 56
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "npc_idle",
+                      "points": [],
+                      "originPoint": {
+                        "name": "Origin",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "Center",
+                        "x": 19,
+                        "y": 28
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 8,
+                            "y": 3
+                          },
+                          {
+                            "x": 30,
+                            "y": 3
+                          },
+                          {
+                            "x": 30,
+                            "y": 56
+                          },
+                          {
+                            "x": 8,
+                            "y": 56
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": false,
+          "assetStoreId": "",
+          "name": "Enemy",
+          "type": "Sprite",
+          "updateIfNotVisible": true,
+          "variables": [
+            {
+              "name": "HP",
+              "type": "number",
+              "value": 2
+            },
+            {
+              "name": "Facing",
+              "type": "number",
+              "value": -1
+            },
+            {
+              "name": "ShootCD",
+              "type": "number",
+              "value": 1.2
+            }
+          ],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.12,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "enemy_idle",
+                      "points": [],
+                      "originPoint": {
+                        "name": "Origin",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "Center",
+                        "x": 26,
+                        "y": 32
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 8,
+                            "y": 3
+                          },
+                          {
+                            "x": 44,
+                            "y": 3
+                          },
+                          {
+                            "x": 44,
+                            "y": 64
+                          },
+                          {
+                            "x": 8,
+                            "y": 64
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": false,
+          "assetStoreId": "",
+          "name": "PlayerBullet",
+          "type": "Sprite",
+          "updateIfNotVisible": true,
+          "variables": [
+            {
+              "name": "Life",
+              "type": "number",
+              "value": 0.9
+            }
+          ],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.12,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "player_bullet",
+                      "points": [],
+                      "originPoint": {
+                        "name": "Origin",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "Center",
+                        "x": 9,
+                        "y": 5
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": false,
+          "assetStoreId": "",
+          "name": "EnemyBullet",
+          "type": "Sprite",
+          "updateIfNotVisible": true,
+          "variables": [
+            {
+              "name": "Life",
+              "type": "number",
+              "value": 2.5
+            }
+          ],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.12,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "enemy_bullet",
+                      "points": [],
+                      "originPoint": {
+                        "name": "Origin",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "Center",
+                        "x": 7,
+                        "y": 7
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": false,
+          "assetStoreId": "",
+          "name": "Ground",
+          "type": "Sprite",
+          "updateIfNotVisible": true,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Platform",
+              "type": "PlatformBehavior::PlatformBehavior",
+              "canBeGrabbed": true,
+              "platformType": "NormalPlatform",
+              "yGrabOffset": 0
+            }
+          ],
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.12,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "ground",
+                      "points": [],
+                      "originPoint": {
+                        "name": "Origin",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "Center",
+                        "x": 32,
+                        "y": 64
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": false,
+          "assetStoreId": "",
+          "name": "Platform",
+          "type": "Sprite",
+          "updateIfNotVisible": true,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Platform",
+              "type": "PlatformBehavior::PlatformBehavior",
+              "canBeGrabbed": true,
+              "platformType": "Jumpthru",
+              "yGrabOffset": 0
+            }
+          ],
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.12,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "platform",
+                      "points": [],
+                      "originPoint": {
+                        "name": "Origin",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "Center",
+                        "x": 32,
+                        "y": 12
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": false,
+          "assetStoreId": "",
+          "name": "Background",
+          "type": "Sprite",
+          "updateIfNotVisible": true,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.12,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "background",
+                      "points": [],
+                      "originPoint": {
+                        "name": "Origin",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "Center",
+                        "x": 640,
+                        "y": 360
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": false,
+          "assetStoreId": "",
+          "name": "Tree",
+          "type": "Sprite",
+          "updateIfNotVisible": true,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.12,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "tree",
+                      "points": [],
+                      "originPoint": {
+                        "name": "Origin",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "Center",
+                        "x": 72,
+                        "y": 100
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": false,
+          "assetStoreId": "",
+          "name": "Bush",
+          "type": "Sprite",
+          "updateIfNotVisible": true,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.12,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "bush",
+                      "points": [],
+                      "originPoint": {
+                        "name": "Origin",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "Center",
+                        "x": 53,
+                        "y": 24
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": false,
+          "assetStoreId": "",
+          "name": "Shelter",
+          "type": "Sprite",
+          "updateIfNotVisible": true,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.12,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "shelter",
+                      "points": [],
+                      "originPoint": {
+                        "name": "Origin",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "Center",
+                        "x": 160,
+                        "y": 110
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": false,
+          "assetStoreId": "",
+          "name": "Flag",
+          "type": "Sprite",
+          "updateIfNotVisible": true,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.12,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "flag",
+                      "points": [],
+                      "originPoint": {
+                        "name": "Origin",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "Center",
+                        "x": 36,
+                        "y": 80
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": false,
+          "assetStoreId": "",
+          "name": "Goal",
+          "type": "Sprite",
+          "updateIfNotVisible": true,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.12,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "goal_zone",
+                      "points": [],
+                      "originPoint": {
+                        "name": "Origin",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "Center",
+                        "x": 190,
+                        "y": 97
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": false,
+          "assetStoreId": "",
+          "name": "Sign",
+          "type": "Sprite",
+          "updateIfNotVisible": true,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.12,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "sign",
+                      "points": [],
+                      "originPoint": {
+                        "name": "Origin",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "Center",
+                        "x": 65,
+                        "y": 44
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": false,
+          "assetStoreId": "",
+          "name": "HUDPanel",
+          "type": "Sprite",
+          "updateIfNotVisible": true,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.12,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "hud",
+                      "points": [],
+                      "originPoint": {
+                        "name": "Origin",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "Center",
+                        "x": 620,
+                        "y": 44
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": false,
+          "assetStoreId": "",
+          "name": "Footer",
+          "type": "Sprite",
+          "updateIfNotVisible": true,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.12,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "footer",
+                      "points": [],
+                      "originPoint": {
+                        "name": "Origin",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "Center",
+                        "x": 620,
+                        "y": 19
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": false,
+          "assetStoreId": "",
+          "name": "Veil",
+          "type": "Sprite",
+          "updateIfNotVisible": true,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.12,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "veil",
+                      "points": [],
+                      "originPoint": {
+                        "name": "Origin",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "Center",
+                        "x": 640,
+                        "y": 360
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": false,
+          "assetStoreId": "",
+          "name": "Modal",
+          "type": "Sprite",
+          "updateIfNotVisible": true,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.12,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "modal",
+                      "points": [],
+                      "originPoint": {
+                        "name": "Origin",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "Center",
+                        "x": 380,
+                        "y": 228
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": false,
+          "assetStoreId": "",
+          "name": "PromptBG",
+          "type": "Sprite",
+          "updateIfNotVisible": true,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.12,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "prompt_bg",
+                      "points": [],
+                      "originPoint": {
+                        "name": "Origin",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "Center",
+                        "x": 315,
+                        "y": 19
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "bold": true,
+          "italic": false,
+          "name": "HPText",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "5 / 5",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 25,
+          "color": {
+            "b": 206,
+            "g": 239,
+            "r": 249
+          },
+          "content": {
+            "bold": true,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "5 / 5",
+            "font": "",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 25,
+            "lineHeight": 0,
+            "color": "249;239;206"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": true,
+          "italic": false,
+          "name": "NPCHealthText",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "3 / 3",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 25,
+          "color": {
+            "b": 206,
+            "g": 239,
+            "r": 249
+          },
+          "content": {
+            "bold": true,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "3 / 3",
+            "font": "",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 25,
+            "lineHeight": 0,
+            "color": "249;239;206"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": true,
+          "italic": false,
+          "name": "NPCStateText",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "MENUNGGU",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 19,
+          "color": {
+            "b": 186,
+            "g": 231,
+            "r": 162
+          },
+          "content": {
+            "bold": true,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "MENUNGGU",
+            "font": "",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 19,
+            "lineHeight": 0,
+            "color": "162;231;186"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "ControlText",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "A / D atau ← →  Gerak       SPACE  Lompat       Z  Tembak       E  Selamatkan       R  Ulang",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 16,
+          "color": {
+            "b": 216,
+            "g": 235,
+            "r": 223
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "A / D atau ← →  Gerak       SPACE  Lompat       Z  Tembak       E  Selamatkan       R  Ulang",
+            "font": "",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 16,
+            "lineHeight": 0,
+            "color": "223;235;216"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": true,
+          "italic": false,
+          "name": "PromptText",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Dekati warga, lalu tekan E untuk menyelamatkan.",
+          "font": "",
+          "textAlignment": "center",
+          "characterSize": 17,
+          "color": {
+            "b": 196,
+            "g": 240,
+            "r": 255
+          },
+          "content": {
+            "bold": true,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "Dekati warga, lalu tekan E untuk menyelamatkan.",
+            "font": "",
+            "textAlignment": "center",
+            "verticalTextAlignment": "top",
+            "characterSize": 17,
+            "lineHeight": 0,
+            "color": "255;240;196"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": true,
+          "italic": false,
+          "name": "NPCLabel",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "[E] SELAMATKAN",
+          "font": "",
+          "textAlignment": "center",
+          "characterSize": 13,
+          "color": {
+            "b": 70,
+            "g": 55,
+            "r": 22
+          },
+          "content": {
+            "bold": true,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "[E] SELAMATKAN",
+            "font": "",
+            "textAlignment": "center",
+            "verticalTextAlignment": "top",
+            "characterSize": 13,
+            "lineHeight": 0,
+            "color": "22;55;70"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": true,
+          "italic": false,
+          "name": "ModalTitle",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "WARGA SELAMAT!",
+          "font": "",
+          "textAlignment": "center",
+          "characterSize": 42,
+          "color": {
+            "b": 201,
+            "g": 240,
+            "r": 255
+          },
+          "content": {
+            "bold": true,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "WARGA SELAMAT!",
+            "font": "",
+            "textAlignment": "center",
+            "verticalTextAlignment": "top",
+            "characterSize": 42,
+            "lineHeight": 0,
+            "color": "255;240;201"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "ModalBody",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Player dan warga berhasil tiba di pos evakuasi.\n\nMisi selesai!",
+          "font": "",
+          "textAlignment": "center",
+          "characterSize": 21,
+          "color": {
+            "b": 210,
+            "g": 214,
+            "r": 184
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "Player dan warga berhasil tiba di pos evakuasi.\n\nMisi selesai!",
+            "font": "",
+            "textAlignment": "center",
+            "verticalTextAlignment": "top",
+            "characterSize": 21,
+            "lineHeight": 0,
+            "color": "184;214;210"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": true,
+          "italic": false,
+          "name": "EndHint",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "R  ·  MAIN LAGI",
+          "font": "",
+          "textAlignment": "center",
+          "characterSize": 19,
+          "color": {
+            "b": 70,
+            "g": 55,
+            "r": 21
+          },
+          "content": {
+            "bold": true,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "R  ·  MAIN LAGI",
+            "font": "",
+            "textAlignment": "center",
+            "verticalTextAlignment": "top",
+            "characterSize": 19,
+            "lineHeight": 0,
+            "color": "21;55;70"
+          }
+        }
+      ],
+      "objectsFolderStructure": {
+        "folderName": "__ROOT",
+        "children": [
+          {
+            "objectName": "Player"
+          },
+          {
+            "objectName": "NPC"
+          },
+          {
+            "objectName": "Enemy"
+          },
+          {
+            "objectName": "PlayerBullet"
+          },
+          {
+            "objectName": "EnemyBullet"
+          },
+          {
+            "objectName": "Ground"
+          },
+          {
+            "objectName": "Platform"
+          },
+          {
+            "objectName": "Background"
+          },
+          {
+            "objectName": "Tree"
+          },
+          {
+            "objectName": "Bush"
+          },
+          {
+            "objectName": "Shelter"
+          },
+          {
+            "objectName": "Flag"
+          },
+          {
+            "objectName": "Goal"
+          },
+          {
+            "objectName": "Sign"
+          },
+          {
+            "objectName": "HUDPanel"
+          },
+          {
+            "objectName": "Footer"
+          },
+          {
+            "objectName": "Veil"
+          },
+          {
+            "objectName": "Modal"
+          },
+          {
+            "objectName": "PromptBG"
+          },
+          {
+            "objectName": "HPText"
+          },
+          {
+            "objectName": "NPCHealthText"
+          },
+          {
+            "objectName": "NPCStateText"
+          },
+          {
+            "objectName": "ControlText"
+          },
+          {
+            "objectName": "PromptText"
+          },
+          {
+            "objectName": "NPCLabel"
+          },
+          {
+            "objectName": "ModalTitle"
+          },
+          {
+            "objectName": "ModalBody"
+          },
+          {
+            "objectName": "EndHint"
+          }
+        ]
+      },
+      "events": [
+        {
+          "colorB": 124,
+          "colorG": 120,
+          "colorR": 52,
+          "creationTime": 0,
+          "name": "01_PLAYER",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 221,
+                "g": 242,
+                "r": 225,
+                "textB": 48,
+                "textG": 45,
+                "textR": 18
+              },
+              "comment": "Langsung bermain. A/D atau panah mensimulasikan kontrol Platformer. SPACE melompat. Z membuat peluru ke arah Facing. ShootCD memberi jeda 0,25 detik."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "DepartScene"
+                  },
+                  "parameters": [
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "Overlay"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "CameraY"
+                  },
+                  "parameters": [
+                    "",
+                    "=",
+                    "360",
+                    "\"\"",
+                    "0"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarSceneTxt"
+                  },
+                  "parameters": [
+                    "GameState",
+                    "=",
+                    "\"playing\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "Player",
+                    "ShootCD",
+                    "=",
+                    "max(0, Player.Variable(ShootCD) - TimeDelta())"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Invuln",
+                    "=",
+                    "max(0, Player.Variable(Invuln) - TimeDelta())"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "NPC",
+                    "Invuln",
+                    "=",
+                    "max(0, NPC.Variable(Invuln) - TimeDelta())"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Or"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "KeyPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "a"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "KeyPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "Left"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PlatformBehavior::SimulateLeftKey"
+                      },
+                      "parameters": [
+                        "Player",
+                        "Platformer"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "Player",
+                        "Facing",
+                        "=",
+                        "-1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "FlipX"
+                      },
+                      "parameters": [
+                        "Player",
+                        "yes"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Or"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "KeyPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "d"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "KeyPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "Right"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PlatformBehavior::SimulateRightKey"
+                      },
+                      "parameters": [
+                        "Player",
+                        "Platformer"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "Player",
+                        "Facing",
+                        "=",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "FlipX"
+                      },
+                      "parameters": [
+                        "Player",
+                        "no"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "KeyPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "Space"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PlatformBehavior::SimulateJumpKey"
+                      },
+                      "parameters": [
+                        "Player",
+                        "Platformer"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "KeyPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "z"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "VarObjet"
+                      },
+                      "parameters": [
+                        "Player",
+                        "ShootCD",
+                        "<=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "PlayerBullet",
+                        "Player.CenterX()+Player.Variable(Facing)*30-9",
+                        "Player.Y()+29",
+                        "\"\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AddForceXY"
+                      },
+                      "parameters": [
+                        "PlayerBullet",
+                        "Player.Variable(Facing)*680",
+                        "0",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "Player",
+                        "ShootCD",
+                        "=",
+                        "0.25"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "shot",
+                        "no",
+                        "30",
+                        "1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetX"
+                      },
+                      "parameters": [
+                        "Player",
+                        "=",
+                        "min(2512,max(0,Player.X()))"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 124,
+          "colorG": 120,
+          "colorR": 52,
+          "creationTime": 0,
+          "name": "02_ENEMY",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 221,
+                "g": 242,
+                "r": 225,
+                "textB": 48,
+                "textG": 45,
+                "textR": 18
+              },
+              "comment": "Musuh diam, tanpa behavior Platformer. For Each Enemy memberi cooldown terpisah. Hadap player; jika jarak horizontal < 550 piksel, tembak lurus tiap 1,25 detik. Tidak ada patroli, pukulan, atau pergantian target."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarSceneTxt"
+                  },
+                  "parameters": [
+                    "GameState",
+                    "=",
+                    "\"playing\""
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "Enemy",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "Enemy",
+                        "ShootCD",
+                        "=",
+                        "max(0, Enemy.Variable(ShootCD) - TimeDelta())"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "Player.CenterX()",
+                            ">=",
+                            "Enemy.CenterX()"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "Enemy",
+                            "Facing",
+                            "=",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "FlipX"
+                          },
+                          "parameters": [
+                            "Enemy",
+                            "no"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "Player.CenterX()",
+                            "<",
+                            "Enemy.CenterX()"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "Enemy",
+                            "Facing",
+                            "=",
+                            "-1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "FlipX"
+                          },
+                          "parameters": [
+                            "Enemy",
+                            "yes"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "VarObjet"
+                          },
+                          "parameters": [
+                            "Enemy",
+                            "HP",
+                            ">",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "VarObjet"
+                          },
+                          "parameters": [
+                            "Enemy",
+                            "ShootCD",
+                            "<=",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "abs(Player.CenterX()-Enemy.CenterX())",
+                            "<",
+                            "550"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "EnemyBullet",
+                            "Enemy.CenterX()+Enemy.Variable(Facing)*31-7",
+                            "Enemy.Y()+26",
+                            "\"\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AddForceXY"
+                          },
+                          "parameters": [
+                            "EnemyBullet",
+                            "Enemy.Variable(Facing)*300",
+                            "0",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "Enemy",
+                            "ShootCD",
+                            "=",
+                            "1.25"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PlaySound"
+                          },
+                          "parameters": [
+                            "",
+                            "enemy_shot",
+                            "no",
+                            "30",
+                            "1"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 124,
+          "colorG": 120,
+          "colorR": 52,
+          "creationTime": 0,
+          "name": "03_DAMAGE",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 221,
+                "g": 242,
+                "r": 225,
+                "textB": 48,
+                "textG": 45,
+                "textR": 18
+              },
+              "comment": "Peluru player hanya melukai Enemy. Peluru musuh dapat melukai Player atau NPC yang belum aman. Satu peluru memberi 1 damage; Invuln = 1 memberi kebal 1 detik. Life = 0 menandai peluru terpakai sebelum dihapus."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarSceneTxt"
+                  },
+                  "parameters": [
+                    "GameState",
+                    "=",
+                    "\"playing\""
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "PlayerBullet",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "PlayerBullet",
+                        "Life",
+                        "-",
+                        "TimeDelta()"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Or"
+                          },
+                          "parameters": [],
+                          "subInstructions": [
+                            {
+                              "type": {
+                                "value": "VarObjet"
+                              },
+                              "parameters": [
+                                "PlayerBullet",
+                                "Life",
+                                "<=",
+                                "0"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "CollisionNP"
+                              },
+                              "parameters": [
+                                "PlayerBullet",
+                                "Terrain",
+                                "",
+                                "",
+                                "no"
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "PlayerBullet",
+                            "Life",
+                            "=",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "PlayerBullet",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "EnemyBullet",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "EnemyBullet",
+                        "Life",
+                        "-",
+                        "TimeDelta()"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Or"
+                          },
+                          "parameters": [],
+                          "subInstructions": [
+                            {
+                              "type": {
+                                "value": "VarObjet"
+                              },
+                              "parameters": [
+                                "EnemyBullet",
+                                "Life",
+                                "<=",
+                                "0"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "CollisionNP"
+                              },
+                              "parameters": [
+                                "EnemyBullet",
+                                "Terrain",
+                                "",
+                                "",
+                                "no"
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "EnemyBullet",
+                            "Life",
+                            "=",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "EnemyBullet",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "PlayerBullet",
+                  "conditions": [],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "VarObjet"
+                          },
+                          "parameters": [
+                            "PlayerBullet",
+                            "Life",
+                            ">",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "CollisionNP"
+                          },
+                          "parameters": [
+                            "PlayerBullet",
+                            "Enemy",
+                            "",
+                            "",
+                            "no"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "VarObjet"
+                          },
+                          "parameters": [
+                            "Enemy",
+                            "HP",
+                            ">",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PickNearest"
+                          },
+                          "parameters": [
+                            "Enemy",
+                            "PlayerBullet.CenterX()",
+                            "PlayerBullet.CenterY()",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "Enemy",
+                            "HP",
+                            "-",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "PlayerBullet",
+                            "Life",
+                            "=",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "PlayerBullet",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PlaySound"
+                          },
+                          "parameters": [
+                            "",
+                            "hit",
+                            "no",
+                            "40",
+                            "1"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "EnemyBullet",
+                  "conditions": [],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "VarObjet"
+                          },
+                          "parameters": [
+                            "EnemyBullet",
+                            "Life",
+                            ">",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "CollisionNP"
+                          },
+                          "parameters": [
+                            "EnemyBullet",
+                            "Player",
+                            "",
+                            "",
+                            "no"
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "VarObjet"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Invuln",
+                                "<=",
+                                "0"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "ModVarObjet"
+                              },
+                              "parameters": [
+                                "Player",
+                                "HP",
+                                "-",
+                                "1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ModVarObjet"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Invuln",
+                                "=",
+                                "1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PlaySound"
+                              },
+                              "parameters": [
+                                "",
+                                "hit",
+                                "no",
+                                "40",
+                                "1"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "ModVarObjet"
+                              },
+                              "parameters": [
+                                "EnemyBullet",
+                                "Life",
+                                "=",
+                                "0"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Delete"
+                              },
+                              "parameters": [
+                                "EnemyBullet",
+                                ""
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "VarObjet"
+                          },
+                          "parameters": [
+                            "EnemyBullet",
+                            "Life",
+                            ">",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "CollisionNP"
+                          },
+                          "parameters": [
+                            "EnemyBullet",
+                            "NPC",
+                            "",
+                            "",
+                            "no"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "VarObjetTxt"
+                          },
+                          "parameters": [
+                            "NPC",
+                            "State",
+                            "!=",
+                            "\"safe\""
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "VarObjet"
+                              },
+                              "parameters": [
+                                "NPC",
+                                "Invuln",
+                                "<=",
+                                "0"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "ModVarObjet"
+                              },
+                              "parameters": [
+                                "NPC",
+                                "HP",
+                                "-",
+                                "1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ModVarObjet"
+                              },
+                              "parameters": [
+                                "NPC",
+                                "Invuln",
+                                "=",
+                                "1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PlaySound"
+                              },
+                              "parameters": [
+                                "",
+                                "hit",
+                                "no",
+                                "40",
+                                "1"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "ModVarObjet"
+                              },
+                              "parameters": [
+                                "EnemyBullet",
+                                "Life",
+                                "=",
+                                "0"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Delete"
+                              },
+                              "parameters": [
+                                "EnemyBullet",
+                                ""
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarObjet"
+                      },
+                      "parameters": [
+                        "Enemy",
+                        "HP",
+                        "<=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "Enemy",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 124,
+          "colorG": 120,
+          "colorR": 52,
+          "creationTime": 0,
+          "name": "04_NPC",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 221,
+                "g": 242,
+                "r": 225,
+                "textB": 48,
+                "textG": 45,
+                "textR": 18
+              },
+              "comment": "Satu NPC, tanpa ID/antrean/raycast. State: waiting → following → safe. E menyelamatkan dari jarak dekat. Saat following, bergerak jika jarak horizontal > 80 piksel; saat dekat, tidak ada input sehingga deselerasi menghentikannya. Jalur bawah harus rata."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarSceneTxt"
+                  },
+                  "parameters": [
+                    "GameState",
+                    "=",
+                    "\"playing\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "VarObjet"
+                  },
+                  "parameters": [
+                    "NPC",
+                    "HP",
+                    ">",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "VarObjet"
+                  },
+                  "parameters": [
+                    "Player",
+                    "HP",
+                    ">",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarObjetTxt"
+                      },
+                      "parameters": [
+                        "NPC",
+                        "State",
+                        "=",
+                        "\"waiting\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "KeyPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "e"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "abs(NPC.CenterX()-Player.CenterX())",
+                        "<",
+                        "100"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "abs(NPC.CenterY()-Player.CenterY())",
+                        "<",
+                        "80"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarObjetTxt"
+                      },
+                      "parameters": [
+                        "NPC",
+                        "State",
+                        "=",
+                        "\"following\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "rescue",
+                        "no",
+                        "50",
+                        "1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarObjetTxt"
+                      },
+                      "parameters": [
+                        "NPC",
+                        "State",
+                        "=",
+                        "\"following\""
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "NPC.CenterX()",
+                            "<",
+                            "Player.CenterX()-80"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "PlatformBehavior::SimulateRightKey"
+                          },
+                          "parameters": [
+                            "NPC",
+                            "Platformer"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "FlipX"
+                          },
+                          "parameters": [
+                            "NPC",
+                            "no"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "NPC.CenterX()",
+                            ">",
+                            "Player.CenterX()+80"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "PlatformBehavior::SimulateLeftKey"
+                          },
+                          "parameters": [
+                            "NPC",
+                            "Platformer"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "FlipX"
+                          },
+                          "parameters": [
+                            "NPC",
+                            "yes"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "CollisionNP"
+                          },
+                          "parameters": [
+                            "NPC",
+                            "Goal",
+                            "",
+                            "",
+                            "no"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ModVarObjetTxt"
+                          },
+                          "parameters": [
+                            "NPC",
+                            "State",
+                            "=",
+                            "\"safe\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ActivateBehavior"
+                          },
+                          "parameters": [
+                            "NPC",
+                            "Platformer",
+                            "no"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ChangeAnimation"
+                          },
+                          "parameters": [
+                            "NPC",
+                            "=",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PlaySound"
+                          },
+                          "parameters": [
+                            "",
+                            "rescue",
+                            "no",
+                            "45",
+                            "1"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 124,
+          "colorG": 120,
+          "colorR": 52,
+          "creationTime": 0,
+          "name": "05_GOAL_RESTART",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 221,
+                "g": 242,
+                "r": 225,
+                "textB": 48,
+                "textG": 45,
+                "textR": 18
+              },
+              "comment": "GameState: playing / win / lose. Kalah bila HP Player atau NPC habis. Menang bila NPC safe dan Player menyentuh Goal. Urutan + kondisi HP mencegah menang saat kalah pada frame yang sama. Lepas R untuk mengulang seluruh scene."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarSceneTxt"
+                  },
+                  "parameters": [
+                    "GameState",
+                    "=",
+                    "\"playing\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Or"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "value": "VarObjet"
+                      },
+                      "parameters": [
+                        "Player",
+                        "HP",
+                        "<=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "VarObjet"
+                      },
+                      "parameters": [
+                        "NPC",
+                        "HP",
+                        "<=",
+                        "0"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarSceneTxt"
+                  },
+                  "parameters": [
+                    "GameState",
+                    "=",
+                    "\"lose\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarSceneTxt"
+                  },
+                  "parameters": [
+                    "GameState",
+                    "=",
+                    "\"playing\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "VarObjet"
+                  },
+                  "parameters": [
+                    "Player",
+                    "HP",
+                    ">",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "VarObjet"
+                  },
+                  "parameters": [
+                    "NPC",
+                    "HP",
+                    ">",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "VarObjetTxt"
+                  },
+                  "parameters": [
+                    "NPC",
+                    "State",
+                    "=",
+                    "\"safe\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Goal",
+                    "",
+                    "",
+                    "no"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarSceneTxt"
+                  },
+                  "parameters": [
+                    "GameState",
+                    "=",
+                    "\"win\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarSceneTxt"
+                  },
+                  "parameters": [
+                    "GameState",
+                    "=",
+                    "\"win\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "ModalTitle",
+                    "=",
+                    "\"WARGA SELAMAT!\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "ModalBody",
+                    "=",
+                    "\"Player dan warga tiba di pos evakuasi.\" + NewLine() + NewLine() + \"Misi selesai!\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "win",
+                    "no",
+                    "50",
+                    "1"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarSceneTxt"
+                  },
+                  "parameters": [
+                    "GameState",
+                    "=",
+                    "\"lose\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "ModalTitle",
+                    "=",
+                    "\"MISI BELUM BERHASIL\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "ModalBody",
+                    "=",
+                    "\"Nyawa player atau warga habis.\" + NewLine() + NewLine() + \"Tembak musuh dan lindungi warga\" + NewLine() + \"sepanjang perjalanan ke pos evakuasi.\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "EndHint",
+                    "=",
+                    "\"R  ·  COBA LAGI\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "fail",
+                    "no",
+                    "45",
+                    "1"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarSceneTxt"
+                  },
+                  "parameters": [
+                    "GameState",
+                    "!=",
+                    "\"playing\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Montre"
+                  },
+                  "parameters": [
+                    "Overlay",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "PromptBG"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "PromptText"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Platformer",
+                    "no"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "NPC",
+                    "Platformer",
+                    "no"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangeAnimation"
+                  },
+                  "parameters": [
+                    "Player",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangeAnimation"
+                  },
+                  "parameters": [
+                    "NPC",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "PlayerBullet",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "EnemyBullet",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "KeyReleased"
+                  },
+                  "parameters": [
+                    "",
+                    "r"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Scene"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Game\"",
+                    "yes"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 124,
+          "colorG": 120,
+          "colorR": 52,
+          "creationTime": 0,
+          "name": "06_TAMPILAN",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 221,
+                "g": 242,
+                "r": 225,
+                "textB": 48,
+                "textG": 45,
+                "textR": 18
+              },
+              "comment": "HUD dan petunjuk mengikuti variabel, bukan mengubah logika. NPC hanya perlu satu label. Kamera horizontal dibatasi pada panjang level 2.560 piksel. Karakter menjadi transparan saat kebal sementara."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "HPText",
+                    "=",
+                    "ToString(max(0,Player.Variable(HP))) + \" / 5\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "NPCHealthText",
+                    "=",
+                    "ToString(max(0,NPC.Variable(HP))) + \" / 3\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetXY"
+                  },
+                  "parameters": [
+                    "NPCLabel",
+                    "=",
+                    "NPC.CenterX()-70",
+                    "=",
+                    "NPC.Y()-31"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "CameraX"
+                  },
+                  "parameters": [
+                    "",
+                    "=",
+                    "min(1920,max(640,Player.CenterX()+100))",
+                    "\"\"",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Opacity"
+                  },
+                  "parameters": [
+                    "Player",
+                    "=",
+                    "255"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Opacity"
+                  },
+                  "parameters": [
+                    "NPC",
+                    "=",
+                    "255"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarObjetTxt"
+                  },
+                  "parameters": [
+                    "NPC",
+                    "State",
+                    "=",
+                    "\"waiting\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "NPCStateText",
+                    "=",
+                    "\"MENUNGGU\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "PromptText",
+                    "=",
+                    "\"Dekati warga, lalu tekan E untuk menyelamatkan.\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "NPCLabel",
+                    "=",
+                    "\"[E] SELAMATKAN\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarObjetTxt"
+                  },
+                  "parameters": [
+                    "NPC",
+                    "State",
+                    "=",
+                    "\"following\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "NPCStateText",
+                    "=",
+                    "\"MENGIKUTI\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "PromptText",
+                    "=",
+                    "\"Lindungi warga dan antar ke pos evakuasi  →\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "NPCLabel",
+                    "=",
+                    "\"MENGIKUTI\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarObjetTxt"
+                  },
+                  "parameters": [
+                    "NPC",
+                    "State",
+                    "=",
+                    "\"safe\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "NPCStateText",
+                    "=",
+                    "\"AMAN\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "PromptText",
+                    "=",
+                    "\"Warga sudah aman. Masuk ke pos evakuasi!\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "NPCLabel",
+                    "=",
+                    "\"AMAN\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarObjet"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Invuln",
+                    ">",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Opacity"
+                  },
+                  "parameters": [
+                    "Player",
+                    "=",
+                    "140"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarObjet"
+                  },
+                  "parameters": [
+                    "NPC",
+                    "Invuln",
+                    ">",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Opacity"
+                  },
+                  "parameters": [
+                    "NPC",
+                    "=",
+                    "140"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarSceneTxt"
+                  },
+                  "parameters": [
+                    "GameState",
+                    "=",
+                    "\"playing\""
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "PlatformBehavior::IsMoving"
+                      },
+                      "parameters": [
+                        "Player",
+                        "Platformer"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ChangeAnimation"
+                      },
+                      "parameters": [
+                        "Player",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "PlatformBehavior::IsMoving"
+                      },
+                      "parameters": [
+                        "Player",
+                        "Platformer"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ChangeAnimation"
+                      },
+                      "parameters": [
+                        "Player",
+                        "=",
+                        "1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarObjetTxt"
+                      },
+                      "parameters": [
+                        "NPC",
+                        "State",
+                        "!=",
+                        "\"safe\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "PlatformBehavior::IsMoving"
+                      },
+                      "parameters": [
+                        "NPC",
+                        "Platformer"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ChangeAnimation"
+                      },
+                      "parameters": [
+                        "NPC",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarObjetTxt"
+                      },
+                      "parameters": [
+                        "NPC",
+                        "State",
+                        "!=",
+                        "\"safe\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlatformBehavior::IsMoving"
+                      },
+                      "parameters": [
+                        "NPC",
+                        "Platformer"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ChangeAnimation"
+                      },
+                      "parameters": [
+                        "NPC",
+                        "=",
+                        "1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "PlatformBehavior::IsOnFloor"
+                      },
+                      "parameters": [
+                        "Player",
+                        "Platformer"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ChangeAnimation"
+                      },
+                      "parameters": [
+                        "Player",
+                        "=",
+                        "2"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        }
+      ],
+      "layers": [
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera2DPlaneMaxDrawingDistance": 5000,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "Background",
+          "renderingType": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": []
+        },
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera2DPlaneMaxDrawingDistance": 5000,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "",
+          "renderingType": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": []
+        },
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera2DPlaneMaxDrawingDistance": 5000,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "UI",
+          "renderingType": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": []
+        }
+      ],
+      "behaviorsSharedData": []
+    }
+  ],
+  "externalEvents": [],
+  "eventsFunctionsExtensions": [],
+  "externalLayouts": []
+}
